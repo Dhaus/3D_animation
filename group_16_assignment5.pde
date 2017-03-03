@@ -1,9 +1,9 @@
-PShape deer;
+Deer the_deer;
 int moveX, moveZ;
 float angle;
 void setup() {
  size(500,500,P3D); 
- deer = loadShape("deer-obj.obj");
+ the_deer = new Deer();
  frameRate(20);
  moveX = 60;
  moveZ = 100;
@@ -18,11 +18,7 @@ void draw() {
   camera(0, 0, 100,0.0, 0.0, 0.0,0.0, 1.0, 0.0);
   //rotateX(angle);
   endCamera();
-  //translate(50, 50, 0);
-  translate(moveX, 50, 0);
-  scale(1,-1,1);
-  shape(deer, 0, 0, deer.width , deer.height);
-  //box(45);
+  the_deer.display();
   angle += PI/6;
   if (moveX > -100) {
     moveX -= 1;
