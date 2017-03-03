@@ -1,13 +1,8 @@
 Deer the_deer;
-int moveX, moveZ;
 float angle;
 void setup() {
  size(500,500,P3D); 
  the_deer = new Deer();
- frameRate(20);
- moveX = 60;
- moveZ = 100;
- angle = 0;
 }
 
 void draw() {
@@ -19,12 +14,4 @@ void draw() {
   //rotateX(angle);
   endCamera();
   the_deer.display();
-  angle += PI/6;
-  if (moveX > -100) {
-    moveX -= 1;
-    //moveZ -= 3;
-  } else {
-    moveX = 60;
-    //moveZ = 0;
-  }
 }
