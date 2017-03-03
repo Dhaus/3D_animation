@@ -1,8 +1,10 @@
 Deer the_deer;
+Benz the_benz;
 float angle;
 void setup() {
  size(500,500,P3D); 
  the_deer = new Deer();
+ the_benz = new Benz();
 }
 
 void draw() {
@@ -14,4 +16,5 @@ void draw() {
   //rotateX(angle);
   endCamera();
   the_deer.display();
+  the_benz.display();
 }
